@@ -1,0 +1,26 @@
+print("Sign Up\n------------") #written by ahmetbrl38
+username = input("Username :")
+passwd = input("Password :")
+passwd2 = input("Please enter the password again :")
+
+print("You've signed up successfully.\Please sign in.")
+print("Sign In\n------------")
+user = input("Username :")
+password = input("Password :")
+
+while(True):
+        if(user != username and passwd == password ):
+            print("There is not a user with this name.Try again.")
+            user = input("Username :")
+            password = input("Password :")
+        elif(user == username and passwd != password):
+            print("The password is wrong! Try again.")
+            user = input("Username :")
+            password = input("Password :")
+        elif(passwd != passwd2):
+            print("The passwords don't match each other. Please try again.")
+            user = input("Username :")
+            password = input("Password :")
+        else:
+            print("Signing in.....\nSigned in successfully.")
+            break
